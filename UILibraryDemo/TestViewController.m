@@ -42,13 +42,14 @@
 - (IBAction)backbutton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-@end
 
 
 -(void)FlightLogs{
-    InDroSavetoFile *logs = [[SaveToFile alloc]init];
+    InDroSavetoFile *logs = [[InDroSaveToFile alloc]init];
     [logs SaveFlightLogs];
     
 }
+
+@end
 
 // - (void)first:(NSString *)fname second:(NSString *)mname third:(NSString *)lname;

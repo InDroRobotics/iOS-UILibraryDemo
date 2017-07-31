@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30E7FD301F2FBFB400F4F593 /* DJISaveToFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7FD221F2FBFB400F4F593 /* DJISaveToFile.m */; };
+		30E7FD311F2FBFB400F4F593 /* InDroSavetoFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7FD231F2FBFB400F4F593 /* InDroSavetoFile.m */; };
+		30E7FD321F2FBFB400F4F593 /* LoggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7FD241F2FBFB400F4F593 /* LoggerViewController.m */; };
+		30E7FD331F2FBFB400F4F593 /* NSObject+SaveToFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7FD251F2FBFB400F4F593 /* NSObject+SaveToFileViewController.m */; };
+		30E7FD341F2FBFB400F4F593 /* SaveToFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7FD261F2FBFB400F4F593 /* SaveToFile.m */; };
+		30E7FD351F2FBFB400F4F593 /* SavetoFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7FD271F2FBFB400F4F593 /* SavetoFileViewController.m */; };
+		30E7FD361F2FBFB400F4F593 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7FD281F2FBFB400F4F593 /* TestViewController.m */; };
 		81D69A701AC36780F16EE7C2 /* libPods-UILibraryDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB62439E5D943AE7AE28A5FD /* libPods-UILibraryDemo.a */; };
 		A40B6D7F1EA4DC810069B96C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40B6D7E1EA4DC810069B96C /* Assets.xcassets */; };
 		A48847CA1EA2697F00CE5843 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A48847C91EA2697F00CE5843 /* main.m */; };
@@ -50,6 +57,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		30E7FD221F2FBFB400F4F593 /* DJISaveToFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJISaveToFile.m; sourceTree = "<group>"; };
+		30E7FD231F2FBFB400F4F593 /* InDroSavetoFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InDroSavetoFile.m; sourceTree = "<group>"; };
+		30E7FD241F2FBFB400F4F593 /* LoggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggerViewController.m; sourceTree = "<group>"; };
+		30E7FD251F2FBFB400F4F593 /* NSObject+SaveToFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SaveToFileViewController.m"; sourceTree = "<group>"; };
+		30E7FD261F2FBFB400F4F593 /* SaveToFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveToFile.m; sourceTree = "<group>"; };
+		30E7FD271F2FBFB400F4F593 /* SavetoFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavetoFileViewController.m; sourceTree = "<group>"; };
+		30E7FD281F2FBFB400F4F593 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		30E7FD291F2FBFB400F4F593 /* DJISaveToFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJISaveToFile.h; sourceTree = "<group>"; };
+		30E7FD2A1F2FBFB400F4F593 /* InDroSavetoFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InDroSavetoFile.h; sourceTree = "<group>"; };
+		30E7FD2B1F2FBFB400F4F593 /* LoggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggerViewController.h; sourceTree = "<group>"; };
+		30E7FD2C1F2FBFB400F4F593 /* NSObject+SaveToFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SaveToFileViewController.h"; sourceTree = "<group>"; };
+		30E7FD2D1F2FBFB400F4F593 /* SaveToFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveToFile.h; sourceTree = "<group>"; };
+		30E7FD2E1F2FBFB400F4F593 /* SavetoFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavetoFileViewController.h; sourceTree = "<group>"; };
+		30E7FD2F1F2FBFB400F4F593 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		8933F4AC5CDFFD001B8C8C2C /* Pods-UILibraryDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UILibraryDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UILibraryDemo/Pods-UILibraryDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A40B6D7E1EA4DC810069B96C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A48847C51EA2697F00CE5843 /* UILibraryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UILibraryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +139,20 @@
 		A48847C71EA2697F00CE5843 /* UILibraryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				30E7FD221F2FBFB400F4F593 /* DJISaveToFile.m */,
+				30E7FD231F2FBFB400F4F593 /* InDroSavetoFile.m */,
+				30E7FD241F2FBFB400F4F593 /* LoggerViewController.m */,
+				30E7FD251F2FBFB400F4F593 /* NSObject+SaveToFileViewController.m */,
+				30E7FD261F2FBFB400F4F593 /* SaveToFile.m */,
+				30E7FD271F2FBFB400F4F593 /* SavetoFileViewController.m */,
+				30E7FD281F2FBFB400F4F593 /* TestViewController.m */,
+				30E7FD291F2FBFB400F4F593 /* DJISaveToFile.h */,
+				30E7FD2A1F2FBFB400F4F593 /* InDroSavetoFile.h */,
+				30E7FD2B1F2FBFB400F4F593 /* LoggerViewController.h */,
+				30E7FD2C1F2FBFB400F4F593 /* NSObject+SaveToFileViewController.h */,
+				30E7FD2D1F2FBFB400F4F593 /* SaveToFile.h */,
+				30E7FD2E1F2FBFB400F4F593 /* SavetoFileViewController.h */,
+				30E7FD2F1F2FBFB400F4F593 /* TestViewController.h */,
 				A48847CB1EA2697F00CE5843 /* AppDelegate.h */,
 				A48847CC1EA2697F00CE5843 /* AppDelegate.m */,
 				A48847EF1EA39BB200CE5843 /* DefaultLayoutViewController.h */,
@@ -247,7 +282,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A05A9B2EAF8E7AA92BB852FD /* [CP] Copy Pods Resources */ = {
@@ -287,9 +322,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E7FD331F2FBFB400F4F593 /* NSObject+SaveToFileViewController.m in Sources */,
+				30E7FD341F2FBFB400F4F593 /* SaveToFile.m in Sources */,
+				30E7FD351F2FBFB400F4F593 /* SavetoFileViewController.m in Sources */,
 				A48847CD1EA2697F00CE5843 /* AppDelegate.m in Sources */,
+				30E7FD361F2FBFB400F4F593 /* TestViewController.m in Sources */,
 				A48847F11EA39BB200CE5843 /* DefaultLayoutViewController.m in Sources */,
 				A48847CA1EA2697F00CE5843 /* main.m in Sources */,
+				30E7FD301F2FBFB400F4F593 /* DJISaveToFile.m in Sources */,
+				30E7FD321F2FBFB400F4F593 /* LoggerViewController.m in Sources */,
+				30E7FD311F2FBFB400F4F593 /* InDroSavetoFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +471,7 @@
 				INFOPLIST_FILE = UILibraryDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.UILibraryDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = indroapp.v1.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,7 +491,7 @@
 				INFOPLIST_FILE = UILibraryDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.UILibraryDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = indroapp.v1.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
