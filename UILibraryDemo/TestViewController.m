@@ -58,7 +58,7 @@
 - (IBAction)log:(id)sender {
     
     InDroSavetoFile *logs = [[InDroSavetoFile alloc]init];
-    [logs SaveFlightLogs];
+    [logs GetFlightData];
    // printf("Saved Flight Logs"); // For debugging
 }
 @end

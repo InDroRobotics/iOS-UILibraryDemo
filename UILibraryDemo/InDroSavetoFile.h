@@ -27,19 +27,20 @@
 
 @property(nonatomic, retain)NSFileManager *fileMgr;
 @property(nonatomic, retain)NSString *homeDir;
-@property(nonatomic, retain)NSString *filename;
 @property(nonatomic, retain)NSString *filepath;
+@property(nonatomic, retain)NSString *filename;
 @property(nonatomic, retain)NSString *altitude;
 @property(nonatomic, retain)NSString *BatteryLevel;
 @property(nonatomic, retain)NSString *aircraftlocation;
+@property(nonatomic, retain)NSString *data;
 
 
 // method declaration
--(NSString *)GetDocumentDirectory;
 -(NSString *)setFilename;
+-(NSString *)GetDocumentsDirectory;
 -(NSString *)getAltitude;
 -(NSString *)getbatterypercent;
 -(NSString *)getaircaftlocation;
--(void)SaveFlightLogs;
--(int)LogData:(NSString *)data;
+-(void)GetFlightData;
+-(int)LogData:(NSTimer*)timer;
 @end

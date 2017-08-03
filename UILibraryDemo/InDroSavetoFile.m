@@ -133,7 +133,7 @@
 // It calls each of the methods obove to return the specific string value for the parameter
 // Then it puts all the parameters into one string and writes the string to the txt file
 
-- (void)SaveFlightLogs {
+- (void)GetFlightData {
     
     _filepath = [self.GetDocumentDirectory stringByAppendingPathComponent:self.setFilename];
     
@@ -148,7 +148,7 @@
     [df setDateFormat:@"MM_dd_yyyy_HH:mm"];
     NSString *timestamp = [df stringFromDate: currentdate];
     
-    NSString *string = [NSString stringWithFormat:@"%@ Battery Percentage: %@ Altitude: %@ Location: %@\n", timestamp, batterylvl, altitudelvl, locationlvl];
+    NSString *string = [NSString stringWithFormat:@"%@ Battery Percentage: %@ Altitude: %@ Location: %@\r\n", timestamp, batterylvl, altitudelvl, locationlvl];
     
     [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(LogData:) userInfo:string repeats:YES];
 
@@ -159,11 +159,26 @@
     
     
     
-    NSError *error;
+    //NSError *error;
     
     NSString *param1 = [timer userInfo];
     
-    [param1 writeToFile: _filepath atomically:YES encoding:NSUnicodeStringEncoding error:&error];
+    //printf(@"%@", _filepath);
+    
+    
+    
+    NSFileManager *myManager = [NSFileManager defaultManager];
+    if (! [myManager fileExistsAtPath:_filepath]){
+        [param1 writeToFile:_filepath atomically:YES encoding:NSUnicodeStringEncoding error:nil];
+    }
+    else{
+        NSFileHandle *myhandle = [NSFileHandle fileHandleForWritingAtPath:_filepath];
+        
+        [myhandle seekToEndOfFile];
+        [myhandle writeData:[param1 dataUsingEncoding:NSUnicodeStringEncoding]];
+        
+    }
+    
     printf("Successfully wrote to Flight Logs");
 
     

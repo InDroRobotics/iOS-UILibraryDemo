@@ -82,7 +82,7 @@
     while ((_areMotorsOn)) {
         
         InDroSavetoFile *logs = [[InDroSavetoFile alloc]init];
-        [logs SaveFlightLogs];
+        [logs GetFlightData];
         printf("Saved Flight Logs"); // For debugging
         
     }
