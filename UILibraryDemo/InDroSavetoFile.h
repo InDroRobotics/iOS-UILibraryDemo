@@ -37,7 +37,7 @@
 
 // method declaration
 -(NSString *)setFilename;
--(NSString *)GetDocumentsDirectory;
+-(NSString *)GetDocumentDirectory;
 -(NSString *)getAltitude;
 -(NSString *)getbatterypercent;
 -(NSString *)getaircaftlocation;

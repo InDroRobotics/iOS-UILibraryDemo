@@ -155,16 +155,9 @@
 
 }
 
--(int)LogData: (NSTimer *)timer{
-    
-    
-    
-    //NSError *error;
+-(int)LogData: (NSTimer *)timer {
     
     NSString *param1 = [timer userInfo];
-    
-    //printf(@"%@", _filepath);
-    
     
     
     NSFileManager *myManager = [NSFileManager defaultManager];
@@ -173,7 +166,6 @@
     }
     else{
         NSFileHandle *myhandle = [NSFileHandle fileHandleForWritingAtPath:_filepath];
-        
         [myhandle seekToEndOfFile];
         [myhandle writeData:[param1 dataUsingEncoding:NSUnicodeStringEncoding]];
         
