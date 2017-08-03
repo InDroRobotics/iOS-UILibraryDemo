@@ -59,7 +59,7 @@
     
     InDroSavetoFile *logs = [[InDroSavetoFile alloc]init];
     [logs SaveFlightLogs];
-    printf("Saved Flight Logs"); // For debugging
+   // printf("Saved Flight Logs"); // For debugging
 }
 @end
 

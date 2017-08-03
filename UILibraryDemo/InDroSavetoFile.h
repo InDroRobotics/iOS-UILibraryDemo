@@ -40,6 +40,6 @@
 -(NSString *)getAltitude;
 -(NSString *)getbatterypercent;
 -(NSString *)getaircaftlocation;
--(int)SaveFlightLogs;
-
+-(void)SaveFlightLogs;
+-(int)LogData:(NSString *)data;
 @end
