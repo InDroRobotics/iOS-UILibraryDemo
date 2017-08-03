@@ -2,7 +2,7 @@
 //  TestViewController.h
 //  UILibraryDemo
 //
-//  Created by Gord Mason on 2017-07-20.
+//  Created by Kate Mason on 2017-07-20.
 //  Copyright © 2017 DJI. All rights reserved.
 //
 
@@ -12,10 +12,14 @@
 #import <DJISDK/DJISDK.h>
 
 @interface TestViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *test;
 - (IBAction)backbutton:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *testlabel;
+@property(nonatomic, readonly) BOOL areMotorsOn;
+- (IBAction)log:(id)sender;
 
+// Method declarations
 
--(void)FlightLogs;
+// Flight log method call
+
 
 @end

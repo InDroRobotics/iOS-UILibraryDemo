@@ -9,6 +9,7 @@
 #import "DefaultLayoutViewController.h"
 
 @interface DefaultLayoutViewController ()<DJISDKManagerDelegate>
+- (IBAction)Flightlogsbutton:(id)sender;
 
 @end
 
@@ -39,12 +40,14 @@
 - (void)appRegisteredWithError:(NSError *)error
 {
     if (!error) {
-        [self showAlertViewWithMessage:@"Registration Success"];
+        //[self showAlertViewWithMessage:@"Registration Success"];
         [DJISDKManager startConnectionToProduct];
     }else
     {
-        [self showAlertViewWithMessage:[NSString stringWithFormat:@"Registration Error:%@", error]];
+        //[self showAlertViewWithMessage:[NSString stringWithFormat:@"Registration Error:%@", error]];
     }
 }
 
+- (IBAction)Flightlogsbutton:(id)sender {
+}
 @end

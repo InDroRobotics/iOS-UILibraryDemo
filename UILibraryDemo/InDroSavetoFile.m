@@ -2,13 +2,20 @@
 //  InDroSavetoFile.m
 //  UILibraryDemo
 //
-//  Created by Gord Mason on 2017-07-31.
+//  Created by Kate Mason on 2017-07-31.
 //  Copyright © 2017 DJI. All rights reserved.
 //
+// This implementation file creates a txt file in the iPad Documents Directory and write a string with current DJI parameters in it
+
+
 
 #import "InDroSavetoFile.h"
 
+
 @implementation InDroSavetoFile
+
+
+// This method creates a file with the filename mytextfile_ and the timestamp  it was created. It returns the filename as a string to be used in other methods
 
 -(NSString *)setFilename {
     
@@ -17,10 +24,13 @@
     [df setDateFormat:@"MM:dd:yyyy_HH_mm"];
     NSString *timestamp = [df stringFromDate: currentdate];
     
-    _filename = [NSString stringWithFormat:@"mytextfile_%@.txt", timestamp];
+    _filename = [NSString stringWithFormat:@"FlightLog_%@.txt", timestamp];
+    printf("File Name Set"); // For debugging
     return _filename;
     
 }
+
+// This method gets the documents directory on the iPad and goes into the correct folder Flight Logs to save the txt file in
 
 -(NSString *)GetDocumentDirectory{
     _fileMgr = [NSFileManager defaultManager];
@@ -30,6 +40,8 @@
     return _homeDir;
 }
 
+
+//This method gets the value for the current altitude of the drone using the DJI Key Manager. It returns the value as a string.
 -(NSString *)getAltitude{
     
     DJIKeyManager *keyManager = [DJISDKManager keyManager];
@@ -59,6 +71,8 @@
     
     return _altitude;
 }
+
+//This method gets the value for the current battery percentage of the drone using the DJI Key Manager. It returns the value as a string.
 
 -(NSString *)getbatterypercent {
     
@@ -91,6 +105,8 @@
     return _BatteryLevel;
 }
 
+//This method gets the value for the current latitude and longitude of the drone using the DJI Key Manager. It returns the value as a string.
+
 -(NSString *)getaircaftlocation{
     
     DJIKeyManager *keyManager = [DJISDKManager keyManager];
@@ -113,9 +129,11 @@
     return _aircraftlocation;
 }
 
+// This method sets the filepath of the txt file by appending the filename to the documents path
+// It calls each of the methods obove to return the specific string value for the parameter
+// Then it puts all the parameters into one string and writes the string to the txt file
 
-
-- (NSString *)SaveFlightLogs:(id)sender {
+- (int)SaveFlightLogs {
     
     NSError *error;
     _filepath = [self.GetDocumentDirectory stringByAppendingPathComponent:self.setFilename];
@@ -126,9 +144,9 @@
     
     NSString *string = [NSString stringWithFormat:@"Battery Percentage: %@ Altitude: %@ Location: %@\n",batterylvl, altitudelvl, locationlvl];
     [string writeToFile:_filepath atomically:YES encoding:NSUnicodeStringEncoding error:&error];
+    printf("Successfully wrote to Flight Logs");
     
-    return string;
-    
+    return 0;
 }
 
 // ;)

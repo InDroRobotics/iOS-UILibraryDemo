@@ -9,6 +9,7 @@
 #import "DevViewController.h"
 
 @interface DevViewController ()
+- (IBAction)totestview:(id)sender;
 
 @end
 
@@ -34,4 +35,6 @@
 }
 */
 
+- (IBAction)totestview:(id)sender {
+}
 @end

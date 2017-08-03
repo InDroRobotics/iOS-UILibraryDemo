@@ -2,9 +2,17 @@
 //  InDroSavetoFile.h
 //  UILibraryDemo
 //
-//  Created by Gord Mason on 2017-07-31.
+//  Created by Kate Mason on 2017-07-31.
 //  Copyright © 2017 DJI. All rights reserved.
 //
+//
+// This is the header file to set up the methods and variable names in the implementation file
+//
+//
+//
+
+
+// Library import
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -13,6 +21,9 @@
 
 @interface InDroSavetoFile : NSObject
 
+
+
+// Variable/property  declaration
 
 @property(nonatomic, retain)NSFileManager *fileMgr;
 @property(nonatomic, retain)NSString *homeDir;
@@ -23,12 +34,12 @@
 @property(nonatomic, retain)NSString *aircraftlocation;
 
 
-
+// method declaration
 -(NSString *)GetDocumentDirectory;
 -(NSString *)setFilename;
 -(NSString *)getAltitude;
 -(NSString *)getbatterypercent;
 -(NSString *)getaircaftlocation;
--(NSString *)SaveFlightLogs;
+-(int)SaveFlightLogs;
 
 @end

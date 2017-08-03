@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		30E7FD311F2FBFB400F4F593 /* InDroSavetoFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7FD231F2FBFB400F4F593 /* InDroSavetoFile.m */; };
 		30E7FD361F2FBFB400F4F593 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7FD281F2FBFB400F4F593 /* TestViewController.m */; };
+		3B551BB81F31107300C24E7C /* FPVMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B551BB71F31107300C24E7C /* FPVMapViewController.m */; };
+		3B551BBB1F31137500C24E7C /* DevViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B551BBA1F31137500C24E7C /* DevViewController.m */; };
+		3B551BBE1F3115B000C24E7C /* PretendMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B551BBD1F3115B000C24E7C /* PretendMapViewController.m */; };
+		3BE2F53D1F3235E500358FED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE2F53C1F3235E500358FED /* CoreLocation.framework */; };
+		3BE2F53F1F3235EB00358FED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE2F53E1F3235EB00358FED /* MapKit.framework */; };
 		81D69A701AC36780F16EE7C2 /* libPods-UILibraryDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB62439E5D943AE7AE28A5FD /* libPods-UILibraryDemo.a */; };
 		A40B6D7F1EA4DC810069B96C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40B6D7E1EA4DC810069B96C /* Assets.xcassets */; };
 		A48847CA1EA2697F00CE5843 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A48847C91EA2697F00CE5843 /* main.m */; };
@@ -56,6 +61,14 @@
 		30E7FD281F2FBFB400F4F593 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		30E7FD2A1F2FBFB400F4F593 /* InDroSavetoFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InDroSavetoFile.h; sourceTree = "<group>"; };
 		30E7FD2F1F2FBFB400F4F593 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		3B551BB61F31107300C24E7C /* FPVMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPVMapViewController.h; sourceTree = "<group>"; };
+		3B551BB71F31107300C24E7C /* FPVMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPVMapViewController.m; sourceTree = "<group>"; };
+		3B551BB91F31137500C24E7C /* DevViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevViewController.h; sourceTree = "<group>"; };
+		3B551BBA1F31137500C24E7C /* DevViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevViewController.m; sourceTree = "<group>"; };
+		3B551BBC1F3115B000C24E7C /* PretendMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PretendMapViewController.h; sourceTree = "<group>"; };
+		3B551BBD1F3115B000C24E7C /* PretendMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PretendMapViewController.m; sourceTree = "<group>"; };
+		3BE2F53C1F3235E500358FED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3BE2F53E1F3235EB00358FED /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8933F4AC5CDFFD001B8C8C2C /* Pods-UILibraryDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UILibraryDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UILibraryDemo/Pods-UILibraryDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A40B6D7E1EA4DC810069B96C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A48847C51EA2697F00CE5843 /* UILibraryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UILibraryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE2F53F1F3235EB00358FED /* MapKit.framework in Frameworks */,
+				3BE2F53D1F3235E500358FED /* CoreLocation.framework in Frameworks */,
 				A48847EB1EA26B0200CE5843 /* VideoPreviewer.framework in Frameworks */,
 				81D69A701AC36780F16EE7C2 /* libPods-UILibraryDemo.a in Frameworks */,
 			);
@@ -97,6 +112,8 @@
 		26FD7018B7700DA45E0BD5F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BE2F53E1F3235EB00358FED /* MapKit.framework */,
+				3BE2F53C1F3235E500358FED /* CoreLocation.framework */,
 				A48847E01EA26AEC00CE5843 /* VideoPreviewer.xcodeproj */,
 				BB62439E5D943AE7AE28A5FD /* libPods-UILibraryDemo.a */,
 			);
@@ -133,6 +150,12 @@
 				A48847EF1EA39BB200CE5843 /* DefaultLayoutViewController.h */,
 				A48847F01EA39BB200CE5843 /* DefaultLayoutViewController.m */,
 				A48847D11EA2697F00CE5843 /* Main.storyboard */,
+				3B551BBC1F3115B000C24E7C /* PretendMapViewController.h */,
+				3B551BBD1F3115B000C24E7C /* PretendMapViewController.m */,
+				3B551BB91F31137500C24E7C /* DevViewController.h */,
+				3B551BBA1F31137500C24E7C /* DevViewController.m */,
+				3B551BB61F31107300C24E7C /* FPVMapViewController.h */,
+				3B551BB71F31107300C24E7C /* FPVMapViewController.m */,
 				A48847D61EA2697F00CE5843 /* LaunchScreen.storyboard */,
 				A48847D91EA2697F00CE5843 /* Info.plist */,
 				A40B6D7E1EA4DC810069B96C /* Assets.xcassets */,
@@ -198,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A48847C01EA2697F00CE5843 /* Build configuration list for PBXProject "InDro App" */;
+			buildConfigurationList = A48847C01EA2697F00CE5843 /* Build configuration list for PBXProject "UILibraryDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -300,9 +323,12 @@
 			files = (
 				A48847CD1EA2697F00CE5843 /* AppDelegate.m in Sources */,
 				30E7FD361F2FBFB400F4F593 /* TestViewController.m in Sources */,
+				3B551BB81F31107300C24E7C /* FPVMapViewController.m in Sources */,
 				A48847F11EA39BB200CE5843 /* DefaultLayoutViewController.m in Sources */,
+				3B551BBE1F3115B000C24E7C /* PretendMapViewController.m in Sources */,
 				A48847CA1EA2697F00CE5843 /* main.m in Sources */,
 				30E7FD311F2FBFB400F4F593 /* InDroSavetoFile.m in Sources */,
+				3B551BBB1F31137500C24E7C /* DevViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +497,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A48847C01EA2697F00CE5843 /* Build configuration list for PBXProject "InDro App" */ = {
+		A48847C01EA2697F00CE5843 /* Build configuration list for PBXProject "UILibraryDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A48847DA1EA2697F00CE5843 /* Debug */,

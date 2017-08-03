@@ -2,13 +2,20 @@
 //  TestViewController.m
 //  UILibraryDemo
 //
-//  Created by Gord Mason on 2017-07-20.
+//  Created by Kate Mason on 2017-07-20.
 //  Copyright © 2017 DJI. All rights reserved.
 //
+//
+//
+// View Controller to control the Flight Logs View. The view is accessed through the DefaultLayoutView Controller via a segue that is trigger by a button.
+
+//Add libraries and headerfiles
 
 #import "TestViewController.h"
 #import "InDroSavetoFile.h"
 #import <DJISDK/DJISDK.h>
+
+
 
 @interface TestViewController ()
 
@@ -16,6 +23,8 @@
 @end
 
 @implementation TestViewController
+
+//setup to ensure the view had loaded. Use this for all ViewController files
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,18 +47,20 @@
 */
 
 
-
+// Back button
 - (IBAction)backbutton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+// Flight Logs Method call. This method calls the InDroSavetoFile header and implementation files to get the values of the parameters we want. Here we are initializing the class so we can use it then calling th SaveFlightLogs method in it
 
--(void)FlightLogs{
-    InDroSavetoFile *logs = [[InDroSaveToFile alloc]init];
-    [logs SaveFlightLogs];
+ 
+- (IBAction)log:(id)sender {
     
+    InDroSavetoFile *logs = [[InDroSavetoFile alloc]init];
+    [logs SaveFlightLogs];
+    printf("Saved Flight Logs"); // For debugging
 }
-
 @end
 
-// - (void)first:(NSString *)fname second:(NSString *)mname third:(NSString *)lname;
+
