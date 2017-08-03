@@ -41,6 +41,6 @@
 -(NSString *)getAltitude;
 -(NSString *)getbatterypercent;
 -(NSString *)getaircaftlocation;
--(void)GetFlightData;
--(int)LogData:(NSTimer*)timer;
+-(void)GetFlightData:(NSTimer*)timer;
+-(int)LogData;
 @end

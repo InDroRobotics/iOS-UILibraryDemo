@@ -133,9 +133,8 @@
 // It calls each of the methods obove to return the specific string value for the parameter
 // Then it puts all the parameters into one string and writes the string to the txt file
 
-- (void)GetFlightData {
+- (void)GetFlightData:(NSTimer *)timer {
     
-    _filepath = [self.GetDocumentDirectory stringByAppendingPathComponent:self.setFilename];
     
     // Get logging parameters
     NSString *batterylvl = [self.getbatterypercent stringByAppendingString:@""];
@@ -145,35 +144,32 @@
     // Get Timestamp
     NSDate *currentdate = [NSDate date];
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
-    [df setDateFormat:@"MM_dd_yyyy_HH:mm"];
+    [df setDateFormat:@"MM_dd_yyyy_HH:mm:ss"];
     NSString *timestamp = [df stringFromDate: currentdate];
     
     NSString *string = [NSString stringWithFormat:@"%@ Battery Percentage: %@ Altitude: %@ Location: %@\r\n", timestamp, batterylvl, altitudelvl, locationlvl];
     
-    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(LogData:) userInfo:string repeats:YES];
-
-
-}
-
--(int)LogData: (NSTimer *)timer {
-    
-    NSString *param1 = [timer userInfo];
-    
-    
     NSFileManager *myManager = [NSFileManager defaultManager];
     if (! [myManager fileExistsAtPath:_filepath]){
-        [param1 writeToFile:_filepath atomically:YES encoding:NSUnicodeStringEncoding error:nil];
+        [string writeToFile:_filepath atomically:YES encoding:NSUnicodeStringEncoding error:nil];
     }
     else{
         NSFileHandle *myhandle = [NSFileHandle fileHandleForWritingAtPath:_filepath];
         [myhandle seekToEndOfFile];
-        [myhandle writeData:[param1 dataUsingEncoding:NSUnicodeStringEncoding]];
+        [myhandle writeData:[string dataUsingEncoding:NSUnicodeStringEncoding]];
         
     }
     
     printf("Successfully wrote to Flight Logs");
 
+}
+
+-(int)LogData{
     
+    _filepath = [self.GetDocumentDirectory stringByAppendingPathComponent:self.setFilename];
+    
+    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(GetFlightData:) userInfo:nil repeats:YES];
+
     return 0;
 }
 

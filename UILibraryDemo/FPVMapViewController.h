@@ -21,7 +21,7 @@
 
 // Flight log method call
 
--(void)FlightLogs:(id)sender;
+-(int)LogData;
 -(BOOL)motorsOn;
 
 @end
