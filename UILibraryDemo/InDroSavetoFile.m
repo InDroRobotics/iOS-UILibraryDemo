@@ -5,7 +5,7 @@
 //  Created by Kate Mason on 2017-07-31.
 //  Copyright © 2017 DJI. All rights reserved.
 //
-// This implementation file creates a txt file in the iPad Documents Directory and write a string with current DJI parameters in it
+// This implementation file creates a txt file in the iPad Documents Directory and write a string with current DJI parameters in it every second
 
 
 
@@ -21,7 +21,7 @@
     
     NSDate *currentdate = [NSDate date];
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
-    [df setDateFormat:@"MM:dd:yyyy_HH_mm"];
+    [df setDateFormat:@"MM_dd_yyyy_HH:mm"];
     NSString *timestamp = [df stringFromDate: currentdate];
     
     _filename = [NSString stringWithFormat:@"FlightLog_%@.txt", timestamp];
