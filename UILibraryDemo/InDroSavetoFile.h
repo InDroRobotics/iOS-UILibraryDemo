@@ -31,6 +31,8 @@
 @property(nonatomic, retain)NSString *filename;
 @property(nonatomic, retain)NSString *altitude;
 @property(nonatomic, retain)NSString *BatteryLevel;
+@property(nonatomic, retain)NSString *FlightTime;
+@property(nonatomic, retain)NSString *FlightMode;
 @property(nonatomic, retain)NSString *aircraftlocation;
 @property(nonatomic, retain)NSString *data;
 
@@ -40,6 +42,8 @@
 -(NSString *)GetDocumentDirectory;
 -(NSString *)getAltitude;
 -(NSString *)getbatterypercent;
+-(NSString *)getflighttime;
+-(NSString *)getflightmode;
 -(NSString *)getaircaftlocation;
 -(void)GetFlightData:(NSTimer*)timer;
 -(int)LogData;

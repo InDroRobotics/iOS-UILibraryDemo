@@ -5,7 +5,7 @@
 //  Created by Kate Mason on 2017-07-31.
 //  Copyright © 2017 DJI. All rights reserved.
 //
-// This implementation file creates a txt file in the iPad Documents Directory and write a string with current DJI parameters in it every second
+// This implementation file creates a txt file in the iPad Documents Directory and write a string with current DJI parameters in it every second. 
 
 
 
@@ -72,8 +72,6 @@
     return _altitude;
 }
 
-//This method gets the value for the current battery percentage of the drone using the DJI Key Manager. It returns the value as a string.
-
 -(NSString *)getbatterypercent {
     
     DJIKeyManager *keyManager = [DJISDKManager keyManager];
@@ -103,6 +101,71 @@
     
     
     return _BatteryLevel;
+}
+
+
+//This method gets the value for the current battery percentage of the drone using the DJI Key Manager. It returns the value as a string.
+
+-(NSString *)getflighttime {
+    
+    DJIKeyManager *keyManager = [DJISDKManager keyManager];
+    DJIFlightControllerKey *flighttimeLevelKey = [DJIFlightControllerKey keyWithParam:DJIFlightControllerParamFlightTimeInSeconds];
+    //DJIFlightControllerKey *altitudeKey = [DJIFlightControllerKey keyWithParam:DJIFlightControllerParamAltitudeInMeters];
+    
+    
+    [keyManager getValueForKey:flighttimeLevelKey
+                withCompletion:^(DJIKeyedValue * _Nullable value, NSError * _Nullable error)
+     
+     
+     {
+         if (error || value == nil) {
+             // insert graceful error handling here.
+             
+             NSLog(@"Error getting Flight Time Level Key");
+         } else {
+             // DJIBatteryParamChargeRemainingInPercent is associated with a uint8_t value
+             
+             NSUInteger flighttime = value.unsignedIntegerValue;
+             
+             
+             _FlightTime = [NSString stringWithFormat:@"%tu%%", flighttime];
+             
+         }
+     }];
+    
+    
+    return _FlightTime;
+}
+
+
+-(NSString *)getflightmode{
+    
+    DJIKeyManager *keyManager = [DJISDKManager keyManager];
+    DJIFlightControllerKey *flightmodekey = [DJIFlightControllerKey keyWithParam:DJIFlightControllerParamFlightMode];
+    
+    
+    [keyManager getValueForKey:flightmodekey
+                withCompletion:^(DJIKeyedValue * _Nullable value, NSError * _Nullable error)
+     
+     
+     {
+         if (error || value == nil) {
+             // insert graceful error handling here.
+             
+             NSLog(@"Error getting Flight Mode Key");
+         } else {
+             // DJIBatteryParamChargeRemainingInPercent is associated with a uint8_t value
+             
+             NSString *flightMode = value.stringValue;
+             
+             
+             _FlightMode = [NSString stringWithFormat:@"%@",flightMode];
+             
+         }
+     }];
+    
+    
+    return _FlightMode;
 }
 
 //This method gets the value for the current latitude and longitude of the drone using the DJI Key Manager. It returns the value as a string.
@@ -137,6 +200,8 @@
     
     
     // Get logging parameters
+    NSString *flightTIME = [self.getflighttime stringByAppendingString:@""];
+    NSString *flightMODE = [self.getflightmode stringByAppendingString:@""];
     NSString *batterylvl = [self.getbatterypercent stringByAppendingString:@""];
     NSString *altitudelvl = [self.getAltitude stringByAppendingString:@""];
     NSString *locationlvl = [self.getaircaftlocation stringByAppendingString:@""];
@@ -147,7 +212,7 @@
     [df setDateFormat:@"MM_dd_yyyy_HH:mm:ss"];
     NSString *timestamp = [df stringFromDate: currentdate];
     
-    NSString *string = [NSString stringWithFormat:@"%@ Battery Percentage: %@ Altitude: %@ Location: %@\r\n", timestamp, batterylvl, altitudelvl, locationlvl];
+    NSString *string = [NSString stringWithFormat:@"%@ Flight Time (seconds): %@ Flight Mode: %@ Battery Percentage: %@ Altitude: %@ Location: %@\r\n", timestamp,flightTIME,flightMODE, batterylvl, altitudelvl, locationlvl];
     
     NSFileManager *myManager = [NSFileManager defaultManager];
     if (! [myManager fileExistsAtPath:_filepath]){
@@ -163,6 +228,8 @@
     printf("Successfully wrote to Flight Logs");
 
 }
+
+// This method gets called from the TestView Controller and sets the filepath of the text file. Then it uses a timer to call the method GetFlightData every second
 
 -(int)LogData{
     

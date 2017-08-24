@@ -64,7 +64,6 @@
              
              
              _areMotorsOn = motorsonLevel;
-             printf("motorsonLevel = _aremotorsOn"); // For debugging
              
          }
      }];
@@ -76,16 +75,16 @@
 }
 
 -(void)FlightLogs:(id)sender{
+
     
-    
-    
-    while ((_areMotorsOn)) {
+    if (_areMotorsOn == YES) {
         
         InDroSavetoFile *logs = [[InDroSavetoFile alloc]init];
         [logs LogData];
         printf("Saved Flight Logs"); // For debugging
         
     }
+    
 }
 
 
